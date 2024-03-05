@@ -1,0 +1,78 @@
+@media screen and (max-width: 1280px) {
+    nav.navs ul li a {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+    span.logo {
+        width: 150px;
+        flex: 0 0 150px;
+    }
+}
+@media screen and (max-width: 1136px) {
+    .aircraftpartsImg:after {
+        width: 360px;
+        height: 70%;
+        left: 6%;
+        top: 15px;
+    }
+    .aircraftpartsImgBtm {
+        bottom: 100px;
+    }
+    
+}
+@media screen and (max-width: 991px) {
+    .banner .row {
+        height: 450px;
+    }
+    .aircraftpartsImg:after {
+        width: 290px;
+        height: 400px;
+        left: 6%;
+        top: 15px;
+    }   
+    .aircraftpartsImgBtm {
+        bottom: auto;
+        top: 260px;
+        width: 171px;
+    }
+    .lists li {
+        font-size: 20px;
+    } 
+    .mb-5 {
+        margin-bottom: 1rem!important;
+    }
+}
+@media screen and (max-width:767px) {
+    .aircraftpartsImg {
+        padding: 0 0;
+        z-index: 1;
+    }
+    .col-md-6.relative.aircraftpartsImg img {
+        max-width: 300px;
+        display: block;
+        margin: 0 auto;
+    }
+    .aircraftpartsImg:after {
+        width: 290px;
+        height: 366px;
+        left: 0;
+        top: 15px;
+        right: 0;
+        margin: 0 auto;
+    }
+    .aircraftpartsImgTop {
+        position: absolute;
+        top: -30px;
+        left: 80px;
+        width: 130px;
+    }
+    .aircraftpartsImgBtm {
+        bottom: auto;
+        top: 260px;
+        width: 131px;
+    }
+    
+}
+@media screen and (max-width:667px) {
+   
+}
