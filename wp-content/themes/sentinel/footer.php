@@ -23,8 +23,7 @@ $page_slug = 'site-general-settings';
                     <ul class="flinks">
                         <?php while($allserv->have_posts()):$allserv->the_post(); ?>
                         <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-                       
-                    <?php endwhile; ?>
+                     <?php endwhile; ?>
                     </ul>
                 </div>
                 <div class="col-sm-12 col-md-4">

@@ -85,98 +85,67 @@ $page_slug = 'site-general-settings';
         </div>
     </section>
 
-    <section class="recertifiedparts p-v-200" style="background: url(images/recertifiedbg.jpg) no-repeat top left; background-size: cover; background-attachment: fixed;">
+    <section class="recertifiedparts p-v-200" style="background: url(<?php echo get_field('recertified_background_image'); ?>) no-repeat top left; background-size: cover; background-attachment: fixed;">
         <div class="container">
             <div class="row mt-5 flex-lg-row-reverse">
                 <div class="col-md-6">
                 <div class="relative aircraftpartsImg">
                     <span class="flyplane"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/2.png" alt="" class="img-fluid"></span>
-                    <span class="recertifiedpartsImgTop"><img src="images/recertified2.jpg" alt="" class="w-100"></span>
-                    <img src="images/recertified1.jpg" alt="" class="w-100">
-                    <span class="recertifiedpartsImgBtm"><img src="images/aircraftparts3.jpg" alt="" class="w-100"></span>
+                    <span class="recertifiedpartsImgTop"><img src="<?php echo get_field('recertified_first_image'); ?>" alt="" class="w-100"></span>
+                    <img src="<?php echo get_field('recertified_second_image'); ?>" alt="" class="w-100">
+                    <span class="recertifiedpartsImgBtm"><img src="<?php echo get_field('recertified_third_image') ;?>" alt="" class="w-100"></span>
                 </div>
                 </div>
                 <div class="col-md-6">
-                    <h2 class="mb-5"><span style="color: var(--secondary-color);">New and 
-                        Recertified 
-                        </span> Aircraft Parts 
-                        For Your Fleet..</h2>
-                    <p>Sentinel Aerospace is a well-known and trusted parts supplier to the global 
-                        aviation aftermarket components industry.<br><br>
+                    <?php echo get_field('recertified_text'); ?> 
                         
-                        It is our goal to help our customers develop customized solutions for their 
-                        daily business operations. We provide innovative and cost-effective ways 
-                        for our clients to handle the maintenance of their aircraft.
-                        </p>   
-                        
-                        <span><a href="#" class="btn btn-warning btn-large mt-4">Enquiry</a></span>  
+                        <span><a href="<?php echo get_site_url().'/'.get_field('enquiry_link'); ?>" class="btn btn-warning btn-large mt-4"><?php echo get_field('enquiry_label') ?></a></span>  
                 </div>
             </div>
         </div>
     </section>
 
 
-    <section class="justabusiness p-v-60 text-white text-center" style="background: url(images/justabusiness.jpg) no-repeat top left; background-size: cover; background-attachment: fixed;">
+    <section class="justabusiness p-v-60 text-white text-center" style="background: url(<?php echo get_field('more_than_just_business_background'); ?>) no-repeat top left; background-size: cover; background-attachment: fixed;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-10 text-center mt-5 mb-4 relative">
-                    <span class="quote1"><img src="images/4.png" alt="" class="img-fluid"></span>
-                    <span class="quote2"><img src="images/5.png" alt="" class="img-fluid"></span>
-                    <h2 style="color: var(--secondary-color);" class="mb-5">More Than Just <br>
-                        Business! <span class="aeroplane"><img src="images/3.png" alt="" class="img-fluid"></span></h2>
+                    <span class="quote1"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/4.png" alt="" class="img-fluid"></span>
+                    <span class="quote2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/5.png" alt="" class="img-fluid"></span>
+                    <h2 class="text-primary" class="mb-5"><?php echo get_field('more_than_just_business_heading'); ?><span class="aeroplane"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/3.png" alt="" class="img-fluid"></span></h2>
 
-                        <p>As a Company, we believe it is important not only to satisfy the demands of our customers, but also to give 
-                            back to the world around us. That is why upon request, a portion of the proceeds from every order is 
-                            donated to a charity, in your company’s name. Don’t have your favorite charity? Then we will 
-                            donate to a deserving charity for you.“We make a living by what we
-                             get, but we make a life with what we give.”</p>
+                      <?php echo get_field('more_than_just_business_text'); ?>
 
-                             <h3 class="mt-5">Winston Churchill</h3>
+                             <h3 class="mt-5"><?php echo get_field('more_than_just_business_author'); ?></h3>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <section class="contactparts p-v-80" style="background: url(images/contactusbg.jpg) no-repeat top left; background-size: cover; background-attachment: fixed;">
+    <section class="contactparts p-v-80" style="background: url(<?php echo get_field('home_contact_us_background_first_image'); ?>) no-repeat top left; background-size: cover; background-attachment: fixed;">
         <div class="container">
             <div class="row mt-5 justify-content-around">
-                <div class="col-md-5 relative" style="background: url(images/requestapart.jpg) top left no-repeat; background-size: cover; border-radius: 30px;">
+                <div class="col-md-5 relative" style="background: url(<?php echo get_field('home_contact_us_background_second_image'); ?>) top left no-repeat; background-size: cover; border-radius: 30px;">
                     <div class="wrap mt-4 mb-4">
-                        <h3>Request a part</h3>
-                        <div class="mb-2 mt-2">
-                            <label for="" class="form-label">Name:</label>
-                            <input type="text" class="form-control" id="" placeholder="" name="">
-                        </div>
-                        <div class="mb-2 mt-2">
-                            <label for="" class="form-label">Email:</label>
-                            <input type="email" class="form-control" id="" placeholder="" name="">
-                        </div>
-                        <div class="mb-2 mt-2">
-                            <label for="" class="form-label">Message:</label>
-                            <textarea name="" id="" class="form-control" cols="30" rows="10" style="height: 200px;"></textarea>
-                        </div>
-                        <div class="mt-4">
-                            <button type="button" class="btn btn-warning">Submit</button>
-                        </div>
+                       
+                        <?php echo do_shortcode('[contact-form-7 id="311ea61" title="Home page form"]'); ?>
                         <div class="clearfix"></div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <h3>Contact Us</h3>
-                    <h2 style="color: var(--secondary-color);" class="mb-3">Get In Touch..</h2>
-                    <p><img src="images/icons/6.png" alt=""> Call 24/7 we are available!</p>
+                    <h2  class="text-primary mb-3">Get In Touch..</h2>
+                    <p><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/6.png" alt=""> Call 24/7 we are available!</p>
                     <h3 class="mt-4 mb-2">Our Address</h3>
-                    <p><img src="images/icons/7.png" alt=""> 955 South Bogle Avenue<br>
-                        Chandler, AZ 85225</p>
-                    <p><a href="#"><img src="images/icons/1.png" alt=""> Sales@sentinelaero.com</a></p>   
-                    <img src="images/map.png" alt="" class="img-fluid"> 
+             <p><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/7.png" alt=""> <?php echo get_field('address',$generalsettingsid); ?></p>
+                    <p><a href="mailto:<?php echo get_field('email',$generalsettingsid); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/1.png" alt=""><?php echo get_field('email',$generalsettingsid); ?></a></p>   
+                   <!-- <img src="images/map.png" alt="" class="img-fluid"> -->
+                    <iframe src="<?php echo get_field('google_map_iframe_link',$generalsettingsid); ?>" width="506" height="253" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="img-fluid"></iframe>
                     
                 </div>
             </div>
         </div>
     </section>
-
-
   
 <?php get_footer(); 

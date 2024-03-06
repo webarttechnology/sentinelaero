@@ -308,3 +308,27 @@ h6 {font-family: var(--bodyMediumFont); line-height: 1.4;}
 .infoBox a {color: var(--secondary-color);}
 .form-control {height:50px; border-radius: 0; background: transparent !important; color: var(--bs-white) !important;}
 textarea.form-control {height:170px;}
+
+
+/* akash and Pushan....6th March 2024 6.34 PM */
+
+.single-our-service .aircraftparts {
+    padding: 100px 0 150px 0;
+}
+.single-our-service .banner.innerBanner .row {
+    height: 325px;
+}
+.page-template-default .aircraftparts {
+    padding: 100px 0 150px 0;
+}
+.page-template-default .banner.innerBanner .row {
+     height: 325px;
+}
+.error404 .aircraftparts {
+    padding: 100px 0 150px 0;
+}
+.error404 .banner.innerBanner .row {
+    height: 325px;
+}
+
+/* akash and Pushan....6th March 2024 6.34 PM */

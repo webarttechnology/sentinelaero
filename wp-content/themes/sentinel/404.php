@@ -13,8 +13,7 @@ get_header();
 
     ?>
 
-
-    <div class="makeup-section mb-110">
+     <section class="aircraftparts p-v-200" >
         <div class="container">
              <div class="makeup-top-item">
                 <div class="row align-items-center justify-content-center g-0 gy-4">
@@ -34,7 +33,7 @@ get_header();
                 </div>
              </div>
       </div>
-     </div>
+     </section>
 
 <?php
 get_footer();

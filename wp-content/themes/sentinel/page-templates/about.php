@@ -1,70 +1,96 @@
-<?php /* Template Name: Quality */ 
+<?php /* Template Name: About */ 
  get_header(); 
 
 $page_slug = 'site-general-settings';
   $generalsettingsid = get_id_by_slug($page_slug);
  ?>
 
-<section class="banner innerBanner" style="background: url(<?php echo get_field('inner_banner'); ?>) no-repeat top left;">
+  <section class="banner innerBanner" style="background: url(<?php echo get_field('inner_banner'); ?>) no-repeat top left;">
         <div class="container">
             <div class="row relative">
                 <div class="col-sm-12 col-md-8">
                     <h1 class="banner_heading mb-4"><?php echo get_field('breadcrumb_title_text'); ?>
-                        <span class="aeroplane"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/3.png" alt="" class="img-fluid"></span>
+                     <span class="aeroplane"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/3.png" alt="" class="img-fluid"></span>
                     </h1>    
                 </div>
             </div>
         </div>
     </section>
 
-  <section class="aircraftparts p-v-200" style="background: url(<?php echo get_field('quality_aircraft_parts_background_image'); ?>) no-repeat top left; background-size: cover; background-attachment: fixed;">
+
+    <section class="aircraftparts p-v-200" style="background: url(<?php echo get_field('about_background_image'); ?>) no-repeat top left; background-size: cover; background-attachment: fixed;">
         <div class="container">
             <div class="row mt-5">
                 <div class="col-md-6">
                 <div class="relative aircraftpartsImg">
                     <span class="flyplane"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/1.png" alt="" class="img-fluid"></span>
-              <span class="aircraftpartsImgTop"><img src="<?php echo get_field('quality_aircraft_parts_first_image'); ?>" alt="" class="w-100"></span>
-                    <img src="<?php echo get_field('quality_aircraft_parts_second_image'); ?>" alt="" class="w-100">
-                    <span class="aircraftpartsImgBtm"><img src="<?php echo get_field('quality_aircraft_part_third_image'); ?>" alt="" class="w-100"></span>
+                    <span class="aircraftpartsImgTop"><img src="<?php echo get_field('about_first_image'); ?>" alt="" class="w-100"></span>
+                    <img src="<?php echo get_field('about_second_image'); ?>" alt="" class="w-100">
+                    <span class="aircraftpartsImgBtm"><img src="<?php echo get_field('about_third_image'); ?>" alt="" class="w-100"></span>
                 </div>
                 </div>
                 <div class="col-md-6">
-                    <?php echo get_field('quality_aircraft_part_text'); ?>
-                </div>
-            </div>
-        </div>
-    </section> 
-
-   <section class=" pt-5 pb-5 text-white" style="background: url(<?php echo get_field('working_for_you_background_image',$generalsettingsid); ?>) no-repeat top left; background-size: cover;">
-        <div class="container">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-sm-6 col-md-12 relative text-center">
-                   <?php echo get_field('working_for_you_text',$generalsettingsid); ?>
-                </div>
-            </div>
-        </div>
-    </section> 
-
-    <section class="recertifiedparts p-v-200" style="background: url(<?php echo get_field('consistent_and_reliable'); ?>) no-repeat top left; background-size: cover; background-attachment: fixed;">
-        <div class="container">
-            <div class="row mt-5 flex-lg-row-reverse">
-                <div class="col-md-6">
-                <div class="relative recertifiedpartsImg">
-                    <span class="flyplane"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/2.png" alt="" class="img-fluid"></span>
-                    <span class="recertifiedpartsImgTop"><img src="<?php echo get_field('consistent_and_reliable_first_image'); ?>" alt="" class="w-100"></span>
-                    <img src="<?php echo get_field('consistent_and_reliable_second_image'); ?>" alt="" class="w-100">
-                    <span class="recertifiedpartsImgBtm"><img src="
-<?php echo get_field('consistent_and_reliable_third_image_'); ?>" alt="" class="w-100"></span>
-                </div>
-                </div>
-                <div class="col-md-6">
-                    <?php echo get_field('consistent_and_reliable_text'); ?>
+                 <?php echo get_field('about_section_text'); ?>  
+                        
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="justabusiness p-v-60 text-white text-center" style="background: url(<?php echo get_field('testimonial_background_image',$generalsettingsid); ?>) no-repeat top left; background-size: cover; background-attachment: fixed;">
+    <section class="support pt-5 pb-5 text-white" style="background: url(<?php echo get_field('24x7_background_image',$generalsettingsid); ?>) no-repeat top left; background-size: cover;">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-sm-5 col-md-5 text-center">
+                    <h3><?php echo get_field('24by_7_support_text',$generalsettingsid); ?></h3>
+                </div>
+                <div class="col-sm-6 col-md-4 relative">
+              <h5><a href="tel:<?php echo get_field('phone',$generalsettingsid); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/2.png" alt=""><?php echo get_field('phone',$generalsettingsid); ?></a></h5>
+                    <h5><a href="mailto:<?php echo get_field('email',$generalsettingsid); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/1.png" alt=""><?php echo get_field('email',$generalsettingsid); ?></a></h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="recertifiedparts p-v-200" style="background: url(<?php echo get_field('what_we_offer_background_image'); ?>) no-repeat top left; background-size: cover; background-attachment: fixed;">
+        <div class="container">
+            <div class="row mt-5 flex-lg-row-reverse">
+                <div class="col-md-6">
+                <div class="relative recertifiedpartsImg">
+                    <span class="flyplane"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/2.png" alt="" class="img-fluid"></span>
+                    <span class="recertifiedpartsImgTop"><img src="<?php echo get_field('what_we_offer_first_image'); ?>" alt="" class="w-100"></span>
+                    <img src="<?php echo get_field('what_we_offer_second_image'); ?>" alt="" class="w-100">
+                    <span class="recertifiedpartsImgBtm"><img src="<?php echo get_field('what_we_offer_third_image'); ?>" alt="" class="w-100"></span>
+                </div>
+                </div>
+                <div class="col-md-6">
+                    <?php echo get_field('what_we_offer_text'); ?>
+                        
+                        <span><a href="<?php echo get_site_url().'/'. get_field('what_we_offer_enquiry_link'); ?>" class="btn btn-warning btn-large mt-4"><?php echo get_field('what_we_offer_enquiry_label'); ?></a></span>  
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="aircraftparts p-v-200">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="relative aircraftpartsImg">
+                        <span class="flyplane"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/1.png" alt="" class="img-fluid"></span>
+                        <span class="aircraftpartsImgTop"><img src="<?php echo get_field('much_more_than_just_parts_first_image'); ?>" alt="" class="w-100"></span>
+                        <img src="<?php echo get_field('much_more_that_just__part_second_image'); ?>" alt="" class="w-100">
+                        <span class="aircraftpartsImgBtm"><img src="<?php echo get_field('much_more_than_just_parts_third_image'); ?>" alt="" class="w-100"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                <?php echo get_field('much_more_that_just_part_text'); ?> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+  <section class="justabusiness p-v-60 text-white text-center" style="background: url(<?php echo get_field('testimonial_background_image',$generalsettingsid); ?>) no-repeat top left; background-size: cover; background-attachment: fixed;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-10 text-center mt-5 mb-4 relative">
@@ -132,10 +158,10 @@ $page_slug = 'site-general-settings';
                         </div>
 
                          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
+                          <span class="carousel-control-prev-icon"></span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
+                         <span class="carousel-control-next-icon"></span>
                         </button> 
 
                        
@@ -144,5 +170,6 @@ $page_slug = 'site-general-settings';
             </div>
         </div>
     </section>
+
 
 <?php get_footer(); ?>    

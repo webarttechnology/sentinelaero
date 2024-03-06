@@ -147,13 +147,6 @@ add_filter( 'login_headerurl', 'my_login_logo_url' );
 
 
 
-add_action( 'login_head', 'custom_login_logo' );
-
-
-
-
-
-
 
 add_action( 'admin_bar_menu', 'remove_wp_logo', 999 );
 
