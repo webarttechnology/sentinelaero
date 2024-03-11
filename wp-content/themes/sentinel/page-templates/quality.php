@@ -19,8 +19,8 @@ $page_slug = 'site-general-settings';
 
   <section class="aircraftparts p-v-200" style="background: url(<?php echo get_field('quality_aircraft_parts_background_image'); ?>) no-repeat top left; background-size: cover; background-attachment: fixed;">
         <div class="container">
-            <div class="row mt-5">
-                <div class="col-md-6">
+            <div class="row mt-5 justify-content-center">
+                <div class="col-10 col-sm-8 col-md-6">
                 <div class="relative aircraftpartsImg">
                     <span class="flyplane"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/1.png" alt="" class="img-fluid"></span>
               <span class="aircraftpartsImgTop"><img src="<?php echo get_field('quality_aircraft_parts_first_image'); ?>" alt="" class="w-100"></span>
@@ -28,17 +28,17 @@ $page_slug = 'site-general-settings';
                     <span class="aircraftpartsImgBtm"><img src="<?php echo get_field('quality_aircraft_part_third_image'); ?>" alt="" class="w-100"></span>
                 </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-11 col-md-6">
                     <?php echo get_field('quality_aircraft_part_text'); ?>
                 </div>
             </div>
         </div>
     </section> 
 
-   <section class=" pt-5 pb-5 text-white" style="background: url(<?php echo get_field('working_for_you_background_image',$generalsettingsid); ?>) no-repeat top left; background-size: cover;">
+   <section class="wTime pt-5 pb-5 text-white" style="background: url(<?php echo get_field('working_for_you_background_image',$generalsettingsid); ?>) no-repeat top left; background-size: cover;">
         <div class="container">
             <div class="row justify-content-center align-items-center">
-                <div class="col-sm-6 col-md-12 relative text-center">
+                <div class="col-11 col-sm-11 col-md-12 relative text-center">
                    <?php echo get_field('working_for_you_text',$generalsettingsid); ?>
                 </div>
             </div>
@@ -47,8 +47,8 @@ $page_slug = 'site-general-settings';
 
     <section class="recertifiedparts p-v-200" style="background: url(<?php echo get_field('consistent_and_reliable'); ?>) no-repeat top left; background-size: cover; background-attachment: fixed;">
         <div class="container">
-            <div class="row mt-5 flex-lg-row-reverse">
-                <div class="col-md-6">
+            <div class="row mt-5 flex-lg-row-reverse justify-content-center">
+                <div class="col-10 col-sm-8 col-md-6">
                 <div class="relative recertifiedpartsImg">
                     <span class="flyplane"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/2.png" alt="" class="img-fluid"></span>
                     <span class="recertifiedpartsImgTop"><img src="<?php echo get_field('consistent_and_reliable_first_image'); ?>" alt="" class="w-100"></span>
@@ -57,7 +57,7 @@ $page_slug = 'site-general-settings';
 <?php echo get_field('consistent_and_reliable_third_image_'); ?>" alt="" class="w-100"></span>
                 </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-11 col-md-6">
                     <?php echo get_field('consistent_and_reliable_text'); ?>
                 </div>
             </div>

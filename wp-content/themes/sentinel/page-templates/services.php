@@ -19,11 +19,11 @@ $page_slug = 'site-general-settings';
 
    <section class="services p-v-60-300" style="background: url(<?php echo get_field('service_below_banner_background'); ?>) no-repeat bottom left; background-size: 100% auto;">
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
+            <div class="row justify-content-center">
+                <div class="col-11 col-sm-12 text-center mb-5">
                     <h2><?php echo get_field('services_heading_text'); ?></h2>
                 </div>
-                <div class="col-12 mt-4">
+                <div class="col-11 col-sm-12 mt-4">
                     <?php $allservice = new WP_Query(array('post_type'=>'our-service','post_status'=>'publish','posts_per_page'=>-1)); ?>
                     <ul class="row lists justify-content-between mb-3">
                         <?php while($allservice->have_posts()):$allservice->the_post(); ?>
@@ -38,10 +38,10 @@ $page_slug = 'site-general-settings';
         </div>
     </section>
 
-    <section class=" pt-5 pb-5 text-white" style="background: url(<?php echo get_field('working_for_you_background_image',$generalsettingsid); ?>) no-repeat top left; background-size: cover;">
+    <section class="wTime pt-5 pb-5 text-white" style="background: url(<?php echo get_field('working_for_you_background_image',$generalsettingsid); ?>) no-repeat top left; background-size: cover;">
         <div class="container">
             <div class="row justify-content-center align-items-center">
-                <div class="col-sm-6 col-md-12 relative text-center">
+                <div class="col-11 col-sm-11 col-md-12 relative text-center">
                    <?php echo get_field('working_for_you_text',$generalsettingsid); ?>
                 </div>
             </div>
@@ -50,8 +50,8 @@ $page_slug = 'site-general-settings';
 
     <section class="recertifiedparts p-v-200" style="background: url(<?php echo get_field('unique_solutions_background_image'); ?>) no-repeat top left; background-size: cover; background-attachment: fixed;">
         <div class="container">
-            <div class="row mt-5 flex-lg-row-reverse">
-                <div class="col-md-6">
+            <div class="row mt-5 flex-lg-row-reverse justify-content-center">
+                <div class="col-10 col-sm-8 col-md-6">
                 <div class="relative recertifiedpartsImg">
                     <span class="flyplane"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/2.png" alt="" class="img-fluid"></span>
                     <span class="recertifiedpartsImgTop"><img src="<?php echo get_field('unique_solution_first_image'); ?>" alt="" class="w-100"></span>

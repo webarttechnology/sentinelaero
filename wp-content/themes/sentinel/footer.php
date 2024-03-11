@@ -4,7 +4,7 @@ $page_slug = 'site-general-settings';
   $generalsettingsid = get_id_by_slug($page_slug); ?>
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-sm-12 col-md-4">
+                <div class="col-sm-6 col-md-6 col-lg-4">
                     <span><a href="#"><img src="<?php echo get_field('logo',$generalsettingsid);  ?>" alt="" class="img-fluid mb-5"></a></span>
                     <ul class="infos">
                         <li><a href="tel:<?php echo get_field('phone',$generalsettingsid);  ?>"><i class="fa-solid fa-phone"></i> <?php echo get_field('phone',$generalsettingsid);  ?></a></li>
@@ -17,7 +17,7 @@ $page_slug = 'site-general-settings';
                         <li><a href="<?php echo get_field('linkedin',$generalsettingsid);  ?>" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
                     </ul>
                 </div>
-                <div class="col-sm-12 col-md-4">
+                <div class="col-sm-6 col-md-6 col-lg-4">
                     <h4 class="mb-3"><?php echo get_field('footer_services_title',$generalsettingsid); ?></h4>
                     <?php $allserv = new WP_Query(array('post_type'=>'our-service','post_status'=>'publish','posts_per_page'=>-1)); ?>
                     <ul class="flinks">
@@ -26,11 +26,12 @@ $page_slug = 'site-general-settings';
                      <?php endwhile; ?>
                     </ul>
                 </div>
-                <div class="col-sm-12 col-md-4">
+                <div class="col-sm-12 col-md-12 col-lg-4">
                     <h4><?php echo get_field('footer_newsletter_title',$generalsettingsid); ?></h4>
                     <div class="mb-2 mt-2 relative">
-                        <input type="email" class="form-control" id="" placeholder="Enter your email." name="">
-                        <button type="button" class="btn btn-warning"><i class="fa-solid fa-paper-plane"></i></button>
+                       <!-- <input type="email" class="form-control" id="" placeholder="Enter your email." name="">
+                        <button type="button" class="btn btn-warning"><i class="fa-solid fa-paper-plane"></i></button> -->
+                        <?php echo do_shortcode('[email-subscribers-form id="1"]'); ?>
                     </div>
                 </div>
                 <div class="col-12 text-center copyright">

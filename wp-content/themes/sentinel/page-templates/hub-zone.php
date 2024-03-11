@@ -19,16 +19,16 @@ $page_slug = 'site-general-settings';
 
     <section class="aircraftparts p-v-200" style="background: url(<?php echo get_field('hub_zone_approved_background_image'); ?>) no-repeat top left; background-size: cover; background-attachment: fixed;">
         <div class="container">
-            <div class="row mt-5">
-                <div class="col-md-6">
-                <div class="relative aircraftpartsImg">
-                    <span class="flyplane"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/1.png" alt="" class="img-fluid"></span>
-                    <span class="aircraftpartsImgTop"><img src="<?php echo get_field('hub_zone_approved_first_image'); ?>" alt="" class="w-100"></span>
-                    <img src="<?php echo get_field('hub_zone_approved_second_image'); ?>" alt="" class="w-100">
-                    <span class="aircraftpartsImgBtm"><img src="<?php echo get_field('hub_zone_approved_third_image'); ?>" alt="" class="w-100"></span>
+            <div class="row mt-5 justify-content-center">
+                <div class="col-10 col-sm-8 col-md-6">
+                    <div class="relative aircraftpartsImg">
+                        <span class="flyplane"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/1.png" alt="" class="img-fluid"></span>
+                        <span class="aircraftpartsImgTop"><img src="<?php echo get_field('hub_zone_approved_first_image'); ?>" alt="" class="w-100"></span>
+                        <img src="<?php echo get_field('hub_zone_approved_second_image'); ?>" alt="" class="w-100">
+                        <span class="aircraftpartsImgBtm"><img src="<?php echo get_field('hub_zone_approved_third_image'); ?>" alt="" class="w-100"></span>
+                    </div>
                 </div>
-                </div>
-                <div class="col-md-6">
+                <div class="col-11 col-md-6">
                     <?php echo get_field('hub_zone_approved_text'); ?>
                 </div>
             </div>

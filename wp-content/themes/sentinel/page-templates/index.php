@@ -12,7 +12,7 @@ $page_slug = 'site-general-settings';
                     <h1 class="banner_heading mb-4"><?php the_field('top_banner_text'); ?> 
                         <span class="aeroplane"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/3.png" alt="" class="img-fluid"></span>
                     </h1>
-                    <?php echo get_field('top_banner_text'); ?>
+                   <p> <?php echo get_field('top_banner_text'); ?></p>
                     
                     <span><a href="<?php echo get_field('first_button_link'); ?>" class="btn btn-warning"><?php echo get_field('first_button_text'); ?></a></span>   
                     <span><a href="<?php echo get_field('second_button_link'); ?>" class="btn text-white"><?php echo get_field('second_button_text'); ?> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/4.png" alt="" class="img-fluid"></a></span>    
@@ -33,8 +33,8 @@ $page_slug = 'site-general-settings';
 
     <section class="aircraftparts p-v-200" style="background: url(<?php echo get_field('below_banner_section_background_image'); ?>) no-repeat top left; background-size: cover; background-attachment: fixed;">
         <div class="container">
-            <div class="row mt-5">
-                <div class="col-md-6">
+            <div class="row mt-5 justify-content-center">
+                <div class="col-10 col-sm-8 col-md-6">
                 <div class="relative aircraftpartsImg">
                     <span class="flyplane"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/1.png" alt="" class="img-fluid"></span>
                     <span class="aircraftpartsImgTop"><img src="<?php echo get_field('below_banner_section_first_image'); ?>" alt="" class="w-100"></span>
@@ -42,7 +42,7 @@ $page_slug = 'site-general-settings';
                     <span class="aircraftpartsImgBtm"><img src="<?php echo get_field('below_banner_section_third_image'); ?>" alt="" class="w-100"></span>
                 </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-11 col-md-6">
                     <h2 class="mb-5"><?php echo get_field('below_banner_section_title'); ?></h2>
                    <?php echo get_field('below_banner_section_text'); ?>
                         
@@ -54,11 +54,11 @@ $page_slug = 'site-general-settings';
 
     <section class="services p-v-60-300" style="background: url(<?php echo get_field('services_background_image'); ?>) no-repeat bottom left; background-size: 100% auto;">
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
+            <div class="row justify-content-center">
+                <div class="col-10 col-sm-10 col-md-12 text-center mb-5">
                     <h2><?php echo get_field('service_section_title'); ?></h2>
                 </div>
-                <div class="col-12 mt-4">
+                <div class="col-10 col-sm-10 col-md-12 mt-4">
                      <?php $allserv = new WP_Query(array('post_type'=>'our-service','post_status'=>'publish','posts_per_page'=>-1)); ?>
                     <ul class="row lists justify-content-between">
                         <?php while($allserv->have_posts()):$allserv->the_post(); ?>
@@ -74,10 +74,10 @@ $page_slug = 'site-general-settings';
     <section class="support pt-5 pb-5 text-white" style="background: url(<?php echo get_field('contact_us_background_image'); ?>) no-repeat top left; background-size: cover;">
         <div class="container">
             <div class="row justify-content-center align-items-center">
-                <div class="col-sm-5 col-md-5 text-center">
+                <div class="col-10 col-md-5 text-center">
                     <h3><?php echo get_field('contact_us_heading'); ?></h3>
                 </div>
-                <div class="col-sm-6 col-md-4 relative">
+                <div class="col-10 col-md-4 relative">
                     <h5><a href="tel:<?php echo get_field('phone',$generalsettingsid);  ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/2.png" alt=""><?php echo get_field('phone',$generalsettingsid);  ?></a></h5>
                     <h5><a href="mailto:<?php echo get_field('email',$generalsettingsid);  ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/1.png" alt=""><?php echo get_field('email',$generalsettingsid);  ?></a></h5>
                 </div>
@@ -87,16 +87,16 @@ $page_slug = 'site-general-settings';
 
     <section class="recertifiedparts p-v-200" style="background: url(<?php echo get_field('recertified_background_image'); ?>) no-repeat top left; background-size: cover; background-attachment: fixed;">
         <div class="container">
-            <div class="row mt-5 flex-lg-row-reverse">
-                <div class="col-md-6">
-                <div class="relative aircraftpartsImg">
+            <div class="row mt-5 flex-lg-row-reverse justify-content-center">
+                <div class="col-10 col-sm-8 col-md-6">
+                <div class="relative recertifiedpartsImg">
                     <span class="flyplane"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/2.png" alt="" class="img-fluid"></span>
                     <span class="recertifiedpartsImgTop"><img src="<?php echo get_field('recertified_first_image'); ?>" alt="" class="w-100"></span>
                     <img src="<?php echo get_field('recertified_second_image'); ?>" alt="" class="w-100">
                     <span class="recertifiedpartsImgBtm"><img src="<?php echo get_field('recertified_third_image') ;?>" alt="" class="w-100"></span>
                 </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-11 col-md-6">
                     <?php echo get_field('recertified_text'); ?> 
                         
                         <span><a href="<?php echo get_site_url().'/'.get_field('enquiry_link'); ?>" class="btn btn-warning btn-large mt-4"><?php echo get_field('enquiry_label') ?></a></span>  
@@ -112,11 +112,11 @@ $page_slug = 'site-general-settings';
                 <div class="col-sm-12 col-md-10 text-center mt-5 mb-4 relative">
                     <span class="quote1"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/4.png" alt="" class="img-fluid"></span>
                     <span class="quote2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/5.png" alt="" class="img-fluid"></span>
-                    <h2 class="text-primary" class="mb-5"><?php echo get_field('more_than_just_business_heading'); ?><span class="aeroplane"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/3.png" alt="" class="img-fluid"></span></h2>
+                    <h2 class="text-primary mb-5"><?php echo get_field('more_than_just_business_heading'); ?><span class="aeroplane"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/3.png" alt="" class="img-fluid"></span></h2>
 
-                      <?php echo get_field('more_than_just_business_text'); ?>
+                    <?php echo get_field('more_than_just_business_text'); ?>
 
-                             <h3 class="mt-5"><?php echo get_field('more_than_just_business_author'); ?></h3>
+                    <h3 class="mt-5"><?php echo get_field('more_than_just_business_author'); ?></h3>
                 </div>
             </div>
         </div>
